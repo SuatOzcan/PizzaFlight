@@ -21,12 +21,12 @@ public class PlayerController : MonoBehaviour
     {
         if (transform.position.x >= rightBoundary)
         {
-            transform.position = new Vector3(10, transform.position.y, transform.position.z);
+            transform.position = new Vector3(rightBoundary, transform.position.y, transform.position.z);
         }
         
-        if (transform.position.x <= leftBoundary)
+        else if (transform.position.x <= leftBoundary)
         {
-            transform.position = new Vector3(-10,transform.position.y, transform.position.z);
+            transform.position = new Vector3(leftBoundary,transform.position.y, transform.position.z);
         }
 
         horizontalInput = Input.GetAxis("Horizontal");
