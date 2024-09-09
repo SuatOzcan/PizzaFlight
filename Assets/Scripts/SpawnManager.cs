@@ -9,22 +9,26 @@ public class SpawnManager : MonoBehaviour
     private float spawnRangeLeftX = -20f;
     private float spawnRangeRightX = 20.00001f;
     private float spawnPointZ = 20;
+    private float spawningRate = 0.75f;
     // Start is called before the first frame update
     void Start()
     {
+        InvokeRepeating("SpawnRandomAnimal", 1, spawningRate);
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftControl))
-        {
-            int animalIndex = Random.Range(0,animalPrefabs.Length);
-            GameObject animal = animalPrefabs[animalIndex];
-            Vector3 spawningPosition = new Vector3(Random.Range(spawnRangeLeftX, spawnRangeRightX), 0, spawnPointZ);
-            Instantiate(animal, spawningPosition, animal.transform.rotation);
-            //Instantiate<GameObject>(AnimalPrefabs[1]); // T constraint of Object.
-        };
+
+    }
+
+    public void SpawnRandomAnimal()
+    {
+        int animalIndex = Random.Range(0, animalPrefabs.Length);
+        GameObject animal = animalPrefabs[animalIndex];
+        Vector3 spawningPosition = new Vector3(Random.Range(spawnRangeLeftX, spawnRangeRightX), 0, spawnPointZ);
+        Instantiate(animal, spawningPosition, animal.transform.rotation);
+        //Instantiate<GameObject>(AnimalPrefabs[1]); // T constraint of Object.
     }
 }
