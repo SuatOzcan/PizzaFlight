@@ -7,8 +7,8 @@ public class PlayerController : MonoBehaviour
 {
     public float horizontalInput;
     private float speed = 10.0f;
-    private float leftBoundary = -10.0f;
-    private float rightBoundary = 10.0f;
+    private float leftBoundary = -20.0f;
+    private float rightBoundary = 20.0f;
     public GameObject projectilePrefab;
 
     // Start is called before the first frame update
