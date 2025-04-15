@@ -350,10 +350,11 @@ GameObject:
   m_Component:
   - component: {fileID: 354122730119217317}
   - component: {fileID: 5178778298532583915}
+  - component: {fileID: 8744900832337432005}
   - component: {fileID: 4824063723470836854}
+  - component: {fileID: 1524128137162244023}
   - component: {fileID: -2097350402118654858}
   - component: {fileID: 7743680403550646844}
-  - component: {fileID: 1524128137162244023}
   m_Layer: 0
   m_Name: Animal_Fox_01
   m_TagString: Untagged
@@ -409,6 +410,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8744900832337432005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2601252495770943516}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a27a8557cdc7ff40a2e4ddf53b46da2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &4824063723470836854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -421,7 +434,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4a3d51eaffa9e44fac3d1fe4b177291, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -20
+  speed: 20
+--- !u!114 &1524128137162244023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2601252495770943516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc7f04e1292405c479ae74af23283791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &-2097350402118654858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -449,24 +474,12 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.16254441, y: 0.21979046, z: 0.37775657}
   m_Center: {x: -0.002339244, y: 0.098589465, z: -0.0023392797}
---- !u!114 &1524128137162244023
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2601252495770943516}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc7f04e1292405c479ae74af23283791, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2796875425374238662
 GameObject:
   m_ObjectHideFlags: 0

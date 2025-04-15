@@ -14,10 +14,10 @@ public class PizzaMover : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(transform.position.x,
-                                          transform.position.y,
-                                          transform.position.z + (speed * Time.deltaTime));
+        //transform.position = new Vector3(transform.position.x,
+        //                                  transform.position.y,
+        //                                  transform.position.z + (speed * Time.deltaTime));
 
-        //transform.Translate(Vector3.forward * speed * Time.deltaTime);
+        transform.Translate(speed * Time.deltaTime * Vector3.forward);
     }
 }

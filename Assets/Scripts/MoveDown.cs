@@ -11,7 +11,7 @@ public class MoveDown : MonoBehaviour
     {
 
         Vector3 result = Vector3.Scale(Vector3.up, Vector3.forward);
-        Debug.Log(result);
+        //Debug.Log(result);
     }
 
     // Update is called once per frame
@@ -21,9 +21,9 @@ public class MoveDown : MonoBehaviour
         //                                 transform.position.y,
         //                                 transform.position.z + (speed * Time.deltaTime));
 
-        transform.Translate(speed * Time.deltaTime * Vector3.forward, Space.World);
-        Debug.Log(speed * Time.deltaTime * Vector3.back);
-        Debug.Log(Vector3.back);
+        transform.Translate(speed * Time.deltaTime * Vector3.forward, Space.Self);
+        //Debug.Log(speed * Time.deltaTime * Vector3.back);
+        //Debug.Log(Vector3.back);
         //Debug.Log(Time.deltaTime);
     }
 }

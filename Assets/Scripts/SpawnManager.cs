@@ -10,6 +10,7 @@ public class SpawnManager : MonoBehaviour
     private float spawnRangeRightX = 10.0f;
     private float spawnPointZ = 20.0f;
     private float spawningRate = 0.75f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +29,7 @@ public class SpawnManager : MonoBehaviour
         int animalIndex = Random.Range(0, animalPrefabs.Length);
         GameObject animal = animalPrefabs[animalIndex];
         Vector3 spawningPosition = new Vector3(Random.Range(spawnRangeLeftX, spawnRangeRightX), 0, spawnPointZ);
+        //Vector3 spawningPosition = new Vector3(0, 0, spawnPointZ);
         Instantiate(animal, spawningPosition, animal.transform.rotation);
         //Instantiate<GameObject>(AnimalPrefabs[1]); // T constraint of Object.
     }

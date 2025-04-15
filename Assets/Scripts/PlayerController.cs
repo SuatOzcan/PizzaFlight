@@ -11,7 +11,8 @@ public class PlayerController : MonoBehaviour
     private float speed = 10.0f;
     private float xRange = 10.0f;
     private float timeHolder = 0.0f;
-    private float fireTime = 0.75f;
+    private float fireTime = 0.65f;
+    private float pizzaPositionYOffset = 1.25f;
     public GameObject projectilePrefab;
 
     // Start is called before the first frame update
@@ -36,15 +37,16 @@ public class PlayerController : MonoBehaviour
         horizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.right * horizontalInput * speed * Time.deltaTime, Space.World);
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space))
         {
-            if (Time.time  > timeHolder)
+            if (Time.time  >= timeHolder)
             {
-                GameObject.Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+                Vector3 pizzaPosition = new Vector3(transform.position.x,
+                                                                                   transform.position.y  + pizzaPositionYOffset ,
+                                                                                   transform.position.z);
+                GameObject.Instantiate(projectilePrefab, pizzaPosition, Quaternion.identity);
                 timeHolder = Time.time + fireTime;
             }
         }
-
-
     }
 }
