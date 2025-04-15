@@ -6,15 +6,15 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
     public GameObject[] animalPrefabs;
-    private float spawnRangeLeftX = -20f;
-    private float spawnRangeRightX = 20.00001f;
-    private float spawnPointZ = 20;
+    private float spawnRangeLeftX = -10.0f;
+    private float spawnRangeRightX = 10.0f;
+    private float spawnPointZ = 20.0f;
     private float spawningRate = 0.75f;
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("SpawnRandomAnimal", 1, spawningRate);
-        
+        //InvokeRepeating("SpawnRandomAnimal", 1, spawningRate);
+        InvokeRepeating(nameof(SpawnRandomAnimal), 1, spawningRate);
     }
 
     // Update is called once per frame
